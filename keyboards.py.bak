@@ -1,0 +1,51 @@
+﻿from aiogram.types import ReplyKeyboardRemove, \
+    ReplyKeyboardMarkup, KeyboardButton, \
+    InlineKeyboardMarkup, InlineKeyboardButton
+
+##0(1,2)
+inline_kb_full_0= InlineKeyboardMarkup(row_width=2)
+inline_btn_01 = InlineKeyboardButton('✨ Направления подготовки', callback_data='btn01')
+inline_btn_02 = InlineKeyboardButton('🚧 Проекты', callback_data='btn02')
+inline_btn_03 = InlineKeyboardButton('🔀 Интересный факт', callback_data='btn03')
+inline_btn_03a = InlineKeyboardButton('🔀 Запись на экскурсию', callback_data='btn03a')
+inline_btn_03b = InlineKeyboardButton('📣 День открытых дверей', callback_data='btn03b')
+inline_btn_04 = InlineKeyboardButton('💌 Отзывы и вопросы', callback_data='btn04')
+inline_btn_05 = InlineKeyboardButton('🦸‍♂️ Связь с сотрудником', callback_data='btn05')
+inline_kb_full_0.row(inline_btn_01)
+inline_kb_full_0.row(inline_btn_02)
+inline_kb_full_0.row(inline_btn_03)
+inline_kb_full_0.row(inline_btn_03a)
+inline_kb_full_0.row(inline_btn_03b)
+inline_kb_full_0.row(inline_btn_04)
+inline_kb_full_0.row(inline_btn_05)
+##inline_kb_full_0.row(inline_btn_06)
+
+
+##0(1,2)
+inline_kb_full_0b= InlineKeyboardMarkup(row_width=2)
+inline_btn_0b1 = InlineKeyboardButton('⬅️ Назад', callback_data='btn00')
+inline_kb_full_0b.row(inline_btn_0b1)
+
+##0(1,2)
+inline_kb_full_0fb= InlineKeyboardMarkup(row_width=2)
+inline_btn_0fb0 = InlineKeyboardButton('🔀 Еще факт!', callback_data='btn03')
+inline_btn_0fb1 = InlineKeyboardButton('⬅️ Назад', callback_data='btn00')
+inline_kb_full_0fb.row(inline_btn_0fb0)
+inline_kb_full_0fb.row(inline_btn_0fb1)
+
+
+##3(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,!5,16)
+inline_kb_full_DL = InlineKeyboardMarkup(row_width=1)
+inline_btn_DL0 = InlineKeyboardButton('0', callback_data='btnDL0')
+inline_btn_DL1 = InlineKeyboardButton('1', callback_data='btnDL1')
+inline_btn_DL2 = InlineKeyboardButton('2', callback_data='btnDL2')
+inline_btn_DL3 = InlineKeyboardButton('3', callback_data='btnDL3')
+inline_btn_DL4 = InlineKeyboardButton('4', callback_data='btnDL4')
+inline_btn_DL5 = InlineKeyboardButton('5', callback_data='btnDL5')
+inline_kb_full_DL.row(inline_btn_DL0, inline_btn_DL1, inline_btn_DL2, inline_btn_DL3, inline_btn_DL4, inline_btn_DL5)
+
+inline_kb_full_PDL = InlineKeyboardMarkup(row_width=1)
+inline_btn_PDL1 = InlineKeyboardButton('🔙Вернуться в начало', callback_data='btnPDL1')
+#inline_btn_PDL2 = InlineKeyboardButton('Вернуться к выбору дней', callback_data='btn2A')
+inline_kb_full_PDL.row(inline_btn_PDL1)
+#inline_kb_full_PDL.row(inline_btn_PDL2)
