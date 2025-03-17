@@ -121,6 +121,9 @@ async def process_start_command2(message: types.Message):
  if message.from_user.id in blacklist:
    await message.reply("ты не можешь использовать бот...(")
  else:
+  await bot.send_message(message.chat.id, f'Привет {message.chat.first_name} !')
+  await bot.send_message(message.chat.id, 'Это бот для Эльмиры.. чтобы надежнее, технологичнее, молодежнее... ')
+  await bot.send_message(message.chat.id, 'Загружаю обложку... ')
   with urllib.request.urlopen("https://cloud-api.yandex.net/v1/disk/public/resources?public_key=https://disk.yandex.ru/i/KfxWLzfBi3ZQxg") as url:
         data0 = json.loads(url.read().decode())
         jsonData = data0["file"]
@@ -132,8 +135,6 @@ async def process_start_command2(message: types.Message):
             file.write(chunk)
         file.close()
   await bot.send_photo(message.from_user.id, photo=open(fileName1, 'rb')) 
-  await bot.send_message(message.chat.id, f'Привет {message.chat.first_name} !')
-  await bot.send_message(message.chat.id, 'Это бот для Эльмиры.. чтобы надежнее, технологичнее, молодежнее... ')
   await FSMAdmin.record0.set()
   await bot.send_message(message.chat.id, 'Что я умею?', reply_markup=kb.inline_kb_full_0)
 
@@ -162,7 +163,7 @@ async def process_callback_button1(callback_query: types.CallbackQuery):
     await callback_query.message.delete()
    ## await bot.send_photo(callback_query.from_user.id, photo = CONTACT)
    ## await bot.send_message(callback_query.from_user.id, 'при возникновении технических проблем пиши +79241311138')
-    await bot.send_message(callback_query.from_user.id, 'Коучинг, айти решения, шутки из Плюшек, встречи в Океане  [+79241311138](tg://user?id=1049416300)', reply_markup=kb.inline_kb_full_0b, parse_mode=ParseMode.MARKDOWN)
+    await bot.send_message(callback_query.from_user.id, 'Коучинг, айти решения, шутки из Плюшек, встречи в Океане  [+79241311138](tg://user?id=1049416300)', reply_markup=kb.inline_kb_full_0, parse_mode=ParseMode.MARKDOWN)
 
     
 @dp.callback_query_handler(lambda c: c.data == 'btn06', state="*")
