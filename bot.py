@@ -570,7 +570,7 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-   ## await state.finish()
+    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#63 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -610,7 +610,7 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-   ## await state.finish()
+    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#64 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -635,10 +635,6 @@ async def download_photo(message: types.Message):
 
 
 
-
-
-
-
 @dp.message_handler(state=FSMAdmin.record65)
 async def any_text_message(message: types.Message):
     # Дополняем исходный текст:
@@ -654,7 +650,7 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-   ## await state.finish()
+    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#65 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -695,7 +691,7 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-   ## await state.finish()
+    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#66 {message.text}')
 ##    await bot.send_message(888808670, message.text)
