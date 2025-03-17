@@ -13,7 +13,7 @@ inline_kb_full_0.row(inline_btn_05)
 
 ##0(1,2)
 inline_kb_full_06= InlineKeyboardMarkup(row_width=2)
-inline_btn_060 = InlineKeyboardButton('⬅️ назад', callback_data='btn00')
+inline_btn_060 = InlineKeyboardButton('⬅️ назад', callback_data='btn060')
 inline_btn_061 = InlineKeyboardButton('1', callback_data='btn061')
 inline_btn_062 = InlineKeyboardButton('2', callback_data='btn062')
 inline_btn_063 = InlineKeyboardButton('3', callback_data='btn063')

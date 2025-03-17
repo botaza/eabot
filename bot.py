@@ -121,8 +121,8 @@ async def process_start_command2(message: types.Message):
  if message.from_user.id in blacklist:
    await message.reply("ты не можешь использовать бот...(")
  else:
-  await bot.send_message(message.chat.id, f'Привет {message.chat.first_name} !')
-  await bot.send_message(message.chat.id, 'Это бот для Эльмиры.. чтобы надежнее, технологичнее, молодежнее... ')
+  await bot.send_message(message.chat.id, f'Hello {message.chat.first_name} !')
+  await bot.send_message(message.chat.id, 'This bot is for Эльмира.. чтобы надежнее, технологичнее, молодежнее... ')
   await bot.send_message(message.chat.id, 'Загружаю обложку... ')
   with urllib.request.urlopen("https://cloud-api.yandex.net/v1/disk/public/resources?public_key=https://disk.yandex.ru/i/KfxWLzfBi3ZQxg") as url:
         data0 = json.loads(url.read().decode())
