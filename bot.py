@@ -420,7 +420,7 @@ async def download_photo(message: types.Message):
  ###   await bot.send_message(746493569, f'#скриншот {fn0p}')
  ###   await bot.send_photo(746493569, id_photo)
 ##    await bot.send_photo(888808670, id_photo)
-        await bot.send_message(message.chat.id, 'Фото отправлено!', reply_markup=kb.inline_kb_full_0b)
+        await bot.send_message(message.chat.id, 'Фото отправлено!', reply_markup=kb.inline_kb_full_0)
 
 ##@dp.message_handler(lambda message: message.text == "синхрофазотрон")
 ##async def any_text_message(message: types.Message):
