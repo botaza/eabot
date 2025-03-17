@@ -67,9 +67,6 @@ class FSMAdmin(StatesGroup):
     record64 = State()
     record65 = State()
     record66 = State()
-    quiz1 = State()
-    reply1 = State()
-    reply2 = State()
 
 ######### общее #########
 
@@ -316,7 +313,6 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#61 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -324,7 +320,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
     await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
-
+    await FSMAdmin.main.set()
 
 
 
@@ -343,7 +339,6 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#62 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -351,7 +346,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
     await bot.send_message(message.chat.id, 'Продолжаем!', reply_markup=kb.inline_kb_full_06)
-
+    await FSMAdmin.main.set()
 
 
 @dp.message_handler(state=FSMAdmin.record63)
@@ -369,7 +364,6 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#63 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -377,7 +371,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
     await bot.send_message(message.chat.id, 'Продолжаем!', reply_markup=kb.inline_kb_full_06)
-
+    await FSMAdmin.main.set()
 
 
 
@@ -397,7 +391,6 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#64 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -405,7 +398,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
     await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
-
+    await FSMAdmin.main.set()
 
 
 
@@ -424,7 +417,6 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#65 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -432,7 +424,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
     await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
-
+    await FSMAdmin.main.set()
 
 
 
@@ -452,7 +444,7 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
+ ##   await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#66 {message.text}')
 ##    await bot.send_message(888808670, message.text)
@@ -460,7 +452,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
     await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
-
+    await FSMAdmin.main.set()
 
 
 
