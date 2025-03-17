@@ -241,60 +241,8 @@ async def unknown_message(msg: types.Message):
         await msg.reply(message_text, parse_mode=ParseMode.MARKDOWN)
 
 
-@dp.message_handler(lambda message: message.text == "privatetext", state="*")
-async def any_text_message(message: types.Message):
-    await bot.delete_message(message.chat.id, message.message_id)
-    await bot.send_message(message.chat.id, f'Введи айди')
-    await FSMAdmin.reply1.set()
 
 
-@dp.message_handler(lambda message: message.text == "restartquiz", state="*")
-async def any_text_message(message: types.Message):
-    filename = "numbers.txt"
-    f = open(filename, 'w')  # open file in append mode
-    f.write('test')
-    f.close()
-
-
-
-@dp.message_handler(state=FSMAdmin.reply1)
-async def any_text_message(message: types.Message):
-    # Дополняем исходный текст:
-        filename = "reply1.txt"
-        f = open(filename, 'w')  # open file in append mode
-    ##with open(filename, encoding='utf-8', 'w') as f:
-    ##f.write('\n' + message.text)
-        f.write(f"{message.text}")
-        f.close()
-
-        await bot.send_message(message.chat.id, f'Отлично! Теперь текст ответа!')
-        await FSMAdmin.reply2.set()
-        
-        
-@dp.message_handler(state=FSMAdmin.reply2)
-async def any_text_message(message: types.Message):
-        filename = "reply2.txt"
-        f = open(filename, 'w')  # open file in append mode
-    ##with open(filename, encoding='utf-8', 'w') as f:
-    ##f.write('\n' + message.text)
-        f.write(f"{message.text}")
-        f.close()
-        
-        filename2 = "reply1.txt"
-        f = open(filename2, 'r')
-        file_contents2 = f.read()
-        ##with open(filename, encoding='utf-8') as f:
-        ##    contents = f.read()
-        
-        filename3 = "reply2.txt"
-        f = open(filename3, 'r')
-        file_contents3 = f.read()
-        ##with open(filename, encoding='utf-8') as f:
-        ##    contents = f.read()
-        
-        await bot.send_message(f'{file_contents2}', f'{file_contents3}')
-        await bot.send_message(message.chat.id, f'Отлично! Сообщение отправлено!', reply_markup=kb.inline_kb_full_0)
-        await FSMAdmin.record0.set()
 
 
 
@@ -457,39 +405,6 @@ async def any_text_message(message: types.Message):
 
 
 
-@dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.quiz1)
-async def download_photo(message: types.Message):
-    userid = message.chat.id
-    fn0p = userid
-##    await message.photo[-1].download(destination_dir=f"{userid}")
-    id_photo = message.photo[-1].file_id
-    await bot.send_message(1049416300, f'#фидбэк {fn0p}')
-    await bot.send_photo(1049416300, id_photo)
- ###   await bot.send_message(746493569, f'#скриншот {fn0p}')
- ###   await bot.send_photo(746493569, id_photo)
-##    await bot.send_photo(888808670, id_photo)
-    await bot.send_message(message.chat.id, 'Фото отправлено!')
-    
-    filename = "numbers.txt"    
-    f = open(filename, 'r')
-    file_contents = f.read()
-    f.close()
-    await bot.send_message(message.chat.id, f'{file_contents}')     
-    await bot.send_message(message.chat.id, 'Продолжаем!')
-
-
-
-
-@dp.message_handler(state=FSMAdmin.quiz1)
-async def any_text_message(message: types.Message):
-    fn0p = message.from_user.id
-    await bot.send_message(1049416300, f'#квиз {message.text} {fn0p}')
-    filename = "numbers.txt"
-    f = open(filename, 'r')
-    file_contents = f.read()
-    f.close()
-    await bot.send_message(message.chat.id, f'{file_contents}')
-    await bot.send_message(message.chat.id, 'Продолжаем!')
 
 @dp.message_handler(content_types=["photo"], state="*")
 async def download_photo(message: types.Message):
