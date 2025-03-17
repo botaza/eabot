@@ -570,14 +570,15 @@ async def any_text_message(message: types.Message):
     f.write(f"#фидбэк {message.text}, записано: {current_time}\n")
     f.close()
    ## await message.delete()
-    await state.finish()
+   ## await state.finish()
     await bot.send_message(1049416300, fn0)
     await bot.send_message(1049416300, f'#63 {message.text}')
 ##    await bot.send_message(888808670, message.text)
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
+    await bot.send_message(message.chat.id, 'Продолжаем!', reply_markup=kb.inline_kb_full_06)
+
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record63)
 async def download_photo(message: types.Message):
