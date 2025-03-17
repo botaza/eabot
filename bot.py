@@ -499,7 +499,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжить вопрос? (например, чтобы прикрепить фото)', reply_markup=kb.inline_kb_full_r4c)
+    await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record61)
 async def download_photo(message: types.Message):
@@ -538,7 +538,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжить вопрос? (например, чтобы прикрепить фото)', reply_markup=kb.inline_kb_full_r4c)
+    await bot.send_message(message.chat.id, 'Продолжаем!', reply_markup=kb.inline_kb_full_06)
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record62)
 async def download_photo(message: types.Message):
@@ -576,7 +576,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжить вопрос? (например, чтобы прикрепить фото)', reply_markup=kb.inline_kb_full_r4c)
+    await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record63)
 async def download_photo(message: types.Message):
@@ -616,7 +616,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжить вопрос? (например, чтобы прикрепить фото)', reply_markup=kb.inline_kb_full_r4c)
+    await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record64)
 async def download_photo(message: types.Message):
@@ -660,7 +660,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжить вопрос? (например, чтобы прикрепить фото)', reply_markup=kb.inline_kb_full_r4c)
+    await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record65)
 async def download_photo(message: types.Message):
@@ -701,7 +701,7 @@ async def any_text_message(message: types.Message):
  ###   await bot.send_message(746493569, fn0)
  ###   await bot.send_message(746493569, f'#фидбэк {message.text}')
     await bot.send_message(message.chat.id, 'Ответ отправлен!')
-    await bot.send_message(message.chat.id, 'Продолжить вопрос? (например, чтобы прикрепить фото)', reply_markup=kb.inline_kb_full_r4c)
+    await bot.send_message(message.chat.id, 'Продолжаем', reply_markup=kb.inline_kb_full_06)
 
 @dp.message_handler(content_types=ContentType.PHOTO, state=FSMAdmin.record66)
 async def download_photo(message: types.Message):
