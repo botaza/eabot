@@ -175,39 +175,39 @@ async def process_callback_button1(callback_query: types.CallbackQuery):
 async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
     await FSMAdmin.record61.set()
-    await bot.send_message(callback_query.from_user.id, 'Любимая строчка из Круга. Можешь также добавить к вопросу фото или скриншот')
+    await bot.send_message(callback_query.from_user.id, 'Любимая строчка из Круга или Меладзе')
 
 @dp.callback_query_handler(lambda c: c.data == 'btn062', state="*")
 async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
     await FSMAdmin.record62.set()
-    await bot.send_message(callback_query.from_user.id, 'Идеальный ужин? Можешь также добавить к вопросу фото или скриншот')
+    await bot.send_message(callback_query.from_user.id, 'Идеальный ужин? Идеальный перекус в кафе?')
 
 @dp.callback_query_handler(lambda c: c.data == 'btn063', state="*")
 async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
     await FSMAdmin.record63.set()
-    await bot.send_message(callback_query.from_user.id, 'Любимые места в ВЛД? Можешь также добавить к вопросу фото или скриншот')
+    await bot.send_message(callback_query.from_user.id, 'Любимые места в ВЛД и Приморье?')
 
 @dp.callback_query_handler(lambda c: c.data == 'btn064', state="*")
 async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
     await FSMAdmin.record64.set()
-    await bot.send_message(callback_query.from_user.id, 'Любимые цветы? Можешь также добавить к вопросу фото или скриншот')
+    await bot.send_message(callback_query.from_user.id, 'Любимые цветы?')
 
 
 @dp.callback_query_handler(lambda c: c.data == 'btn065', state="*")
 async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
     await FSMAdmin.record65.set()
-    await bot.send_message(callback_query.from_user.id, 'Рандомные 5 вещей которые нравятся? Можешь также добавить к вопросу фото или скриншот')
+    await bot.send_message(callback_query.from_user.id, 'Рандомные 5 вещей которые нравятся?')
     
 
 @dp.callback_query_handler(lambda c: c.data == 'btn066', state="*")
 async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id)
     await FSMAdmin.record66.set()
-    await bot.send_message(callback_query.from_user.id, '5 ред-флагов? Можешь также добавить к вопросу фото или скриншот')
+    await bot.send_message(callback_query.from_user.id, '5 ред-флагов?')
     
 @dp.callback_query_handler(lambda c: c.data == 'btn07', state="*")
 async def process_callback_button1(callback_query: types.CallbackQuery):
